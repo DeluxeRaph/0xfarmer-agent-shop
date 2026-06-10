@@ -1,37 +1,3 @@
-# Raphael Nembhard Personal Site
-
-A Rust + Axum personal site with a Windows 95-inspired interface.
-
-## Run
-
-```bash
-cargo run
-```
-
-Then open <http://127.0.0.1:3000>.
-
-## Production-style Run
-
-Local defaults are `HOST=127.0.0.1` and `PORT=3000`.
-
-```bash
-HOST=0.0.0.0 PORT=3000 cargo run --release
-```
-
-Or keep it alive with PM2:
-
-```bash
-npm install
-npx pm2 start ecosystem.config.cjs
-npx pm2 save
-```
-
-Health check:
-
-```bash
-curl http://127.0.0.1:3000/healthz
-```
-
 ## 0xFarmer Agent Shop
 
 The shop lives at `/shop` and exposes launch-oriented Base mainnet API endpoints:
