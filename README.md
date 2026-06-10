@@ -46,21 +46,4 @@ The deploy script refuses non-8453 RPCs and writes `farmer-shop.launch.json` wit
 BASE_RPC_URL=<base-mainnet-rpc> \
 SHOP_NFT_CONTRACT_ADDRESS=<contract> \
 SHOP_MINTER_PRIVATE_KEY=<minter-key> \
-npm run contract:mint:base -- <recipient-wallet> <ipfs://metadata-uri>
-```
-
-## Domain Notes
-
-`0xfarmer.com` and `www.0xfarmer.com` did not resolve from this VPS during launch review. Registrar/DNS ownership is not available in this repository/session, so buying or setting the domain is blocked until registrar/DNS credentials are provided. Once available, point `A`/`AAAA` (or CNAME for `www`) to the production host, set `PUBLIC_BASE_URL=https://0xfarmer.com`, and terminate TLS with nginx/Caddy or another reverse proxy on ports 80/443.
-
-## AI Runtime Notes
-
-For the VPS image runtime, practical options are:
-
-- Use Hermes/AgentCash `stablestudio.dev` for paid image generation while keeping this app as the x402 gate and NFT minter.
-- Run ComfyUI locally if the VPS has a suitable GPU and enough VRAM; expose a small internal HTTP endpoint and call it after payment.
-- Keep the built-in SVG generator as a cheap fallback so mints still work when the AI runtime is unavailable.
-
-## Edit Content
-
-Homepage rendering lives in `src/views.rs`, routes live in `src/app.rs` and `src/handlers.rs`, and static assets live in `assets/`.
+npm run contract:mint:base -- <recipient-wallet> <ipfs://metadata-
